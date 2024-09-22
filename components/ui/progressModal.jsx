@@ -38,7 +38,7 @@ const ProgressModal = ({ checkTests }) => {
           {isEndPressed ? "Scores" : "End Interview"}
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-white text-foreground sm:max-w-[425px]">
+      <DialogContent className="bg-background text-foreground sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>
             {isEndPressed ? "Your Scores" : "Are you sure you want to end?"}
@@ -56,8 +56,8 @@ const ProgressModal = ({ checkTests }) => {
                   value={score}
                   text={`${score}%`}
                   styles={buildStyles({
-                    textColor: "#000",
-                    pathColor: "#007acc",
+                    textColor: "var(--foreground)",
+                    pathColor: "var(--background)",
                     trailColor: "#d6d6d6",
                     textAlign: "center",
                   })}
@@ -69,8 +69,8 @@ const ProgressModal = ({ checkTests }) => {
                   value={Math.min(micClicks / 2 / 6, 1) * 100}
                   text={`${Math.min(micClicks / 2 / 6, 1) * 100}%`}
                   styles={buildStyles({
-                    textColor: "#000",
-                    pathColor: "#007acc",
+                    textColor: "var(--foreground)",
+                    pathColor: "var(--background)",
                     trailColor: "#d6d6d6",
                     textAlign: "center",
                   })}
